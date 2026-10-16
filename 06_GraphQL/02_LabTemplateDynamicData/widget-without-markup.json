@@ -1,0 +1,40 @@
+{
+    "name": "Display GraphQL Query Data",
+    "storefront_api_query": "query productById(  $productId: Int) {  site {    product(entityId: $productId) {      entityId      name      plainTextDescription(characterLimit: 1000)      defaultImage {        ...ImageFields      }      variants {        edges {          node {            ... VariantFields            defaultImage {              ... ImageFields            }          }        }      }    }  }}fragment VariantFields on Variant {  entityId  sku  defaultImage {    ... ImageFields  }  prices {    price{      ... MoneyFields    }    salePrice {      ... MoneyFields    }  }}fragment ImageFields on Image {  url160wide: url(width: 160)  url320wide: url(width: 320)  url640wide: url(width: 640)  url960wide: url(width: 960)  url1280wide: url(width: 1280)}fragment MoneyFields on Money {  value  currencyCode}",
+    "schema": [
+        {
+            "type": "hidden",
+            "settings": [
+                {
+                    "type": "graphQl",
+                    "id": "graphQueries",
+                    "typeMeta": {
+                        "mappings": {
+                            "productId": {
+                                "reads": "productId",
+                                "type": "Int"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "tab",
+            "label": "Display GraphQL Query Data",
+            "sections": [
+                {
+                    "label": "Product",
+                    "settings": [
+                        {
+                            "type": "productId",
+                            "label": "Select a Product",
+                            "id": "productId"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "template": "<div>{{{json _.data}}}</div>"
+}

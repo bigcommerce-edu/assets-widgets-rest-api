@@ -8,1013 +8,45 @@
 	},
 	"item": [
 		{
-			"name": "Widget Templates",
-			"item": [
-				{
-					"name": "Create",
-					"item": [
-						{
-							"name": "Create",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "X-Auth-Client",
-										"value": "{{client_id}}"
-									},
-									{
-										"key": "X-Auth-Token",
-										"value": "{{v3_token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"name\": \"Test\",\n  \"template\": \"<p>Test</p>\",\n  \"schema\": []\n}"
-								},
-								"url": {
-									"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/widget-templates",
-									"protocol": "https",
-									"host": [
-										"api",
-										"bigcommerce",
-										"com"
-									],
-									"path": [
-										"stores",
-										"{{store_hash}}",
-										"v3",
-										"content",
-										"widget-templates"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "List",
-					"item": [
-						{
-							"name": "Without Filter",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "X-Auth-Client",
-										"value": "{{client_id}}"
-									},
-									{
-										"key": "X-Auth-Token",
-										"value": "{{v3_token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"url": {
-									"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/widget-templates",
-									"protocol": "https",
-									"host": [
-										"api",
-										"bigcommerce",
-										"com"
-									],
-									"path": [
-										"stores",
-										"{{store_hash}}",
-										"v3",
-										"content",
-										"widget-templates"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Kind Filter",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "X-Auth-Client",
-										"value": "{{client_id}}"
-									},
-									{
-										"key": "X-Auth-Token",
-										"value": "{{v3_token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"url": {
-									"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/widget-templates?widget_template_kind=custom",
-									"protocol": "https",
-									"host": [
-										"api",
-										"bigcommerce",
-										"com"
-									],
-									"path": [
-										"stores",
-										"{{store_hash}}",
-										"v3",
-										"content",
-										"widget-templates"
-									],
-									"query": [
-										{
-											"key": "widget_template_kind",
-											"value": "custom"
-										}
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "Get",
-					"item": [
-						{
-							"name": "Get",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "X-Auth-Client",
-										"value": "{{client_id}}"
-									},
-									{
-										"key": "X-Auth-Token",
-										"value": "{{v3_token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"url": {
-									"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/widget-templates/WIDGET_TEMPLATE_UUID",
-									"protocol": "https",
-									"host": [
-										"api",
-										"bigcommerce",
-										"com"
-									],
-									"path": [
-										"stores",
-										"{{store_hash}}",
-										"v3",
-										"content",
-										"widget-templates",
-										"WIDGET_TEMPLATE_UUID"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "Update",
-					"item": [
-						{
-							"name": "Update",
-							"request": {
-								"method": "PUT",
-								"header": [
-									{
-										"key": "X-Auth-Client",
-										"value": "{{client_id}}"
-									},
-									{
-										"key": "X-Auth-Token",
-										"value": "{{v3_token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"name\": \"Update Test\"  \n}"
-								},
-								"url": {
-									"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/widget-templates/WIDGET_TEMPLATE_UUID",
-									"protocol": "https",
-									"host": [
-										"api",
-										"bigcommerce",
-										"com"
-									],
-									"path": [
-										"stores",
-										"{{store_hash}}",
-										"v3",
-										"content",
-										"widget-templates",
-										"WIDGET_TEMPLATE_UUID"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "Delete",
-					"item": [
-						{
-							"name": "Delete",
-							"request": {
-								"method": "DELETE",
-								"header": [
-									{
-										"key": "X-Auth-Client",
-										"value": "{{client_id}}"
-									},
-									{
-										"key": "X-Auth-Token",
-										"value": "{{v3_token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/widget-templates/WIDGET_TEMPLATE_UUID",
-									"protocol": "https",
-									"host": [
-										"api",
-										"bigcommerce",
-										"com"
-									],
-									"path": [
-										"stores",
-										"{{store_hash}}",
-										"v3",
-										"content",
-										"widget-templates",
-										"WIDGET_TEMPLATE_UUID"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Widgets",
-			"item": [
-				{
-					"name": "Create",
-					"item": [
-						{
-							"name": "Create",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "X-Auth-Client",
-										"value": "{{client_id}}"
-									},
-									{
-										"key": "X-Auth-Token",
-										"value": "{{v3_token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"name\": \"Test\",\n  \"widget_configuration\": {\"hello\":\"world\"},\n  \"widget_template_uuid\":\"WIDGET_TEMPLATE_UUID\"\n}"
-								},
-								"url": {
-									"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/widgets",
-									"protocol": "https",
-									"host": [
-										"api",
-										"bigcommerce",
-										"com"
-									],
-									"path": [
-										"stores",
-										"{{store_hash}}",
-										"v3",
-										"content",
-										"widgets"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "List",
-					"item": [
-						{
-							"name": "Without Filter",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "X-Auth-Client",
-										"value": "{{client_id}}"
-									},
-									{
-										"key": "X-Auth-Token",
-										"value": "{{v3_token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"url": {
-									"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/widgets",
-									"protocol": "https",
-									"host": [
-										"api",
-										"bigcommerce",
-										"com"
-									],
-									"path": [
-										"stores",
-										"{{store_hash}}",
-										"v3",
-										"content",
-										"widgets"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Kind Filter",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "X-Auth-Client",
-										"value": "{{client_id}}"
-									},
-									{
-										"key": "X-Auth-Token",
-										"value": "{{v3_token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"url": {
-									"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/widgets?widget_template_kind=custom",
-									"protocol": "https",
-									"host": [
-										"api",
-										"bigcommerce",
-										"com"
-									],
-									"path": [
-										"stores",
-										"{{store_hash}}",
-										"v3",
-										"content",
-										"widgets"
-									],
-									"query": [
-										{
-											"key": "widget_template_kind",
-											"value": "custom"
-										}
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "Get",
-					"item": [
-						{
-							"name": "Get",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "X-Auth-Client",
-										"value": "{{client_id}}"
-									},
-									{
-										"key": "X-Auth-Token",
-										"value": "{{v3_token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"url": {
-									"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/widgets/WIDGET_UUID",
-									"protocol": "https",
-									"host": [
-										"api",
-										"bigcommerce",
-										"com"
-									],
-									"path": [
-										"stores",
-										"{{store_hash}}",
-										"v3",
-										"content",
-										"widgets",
-										"WIDGET_UUID"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "Update",
-					"item": [
-						{
-							"name": "Update",
-							"request": {
-								"method": "PUT",
-								"header": [
-									{
-										"key": "X-Auth-Client",
-										"value": "{{client_id}}"
-									},
-									{
-										"key": "X-Auth-Token",
-										"value": "{{v3_token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"name\": \"Update Test\"\t\n}"
-								},
-								"url": {
-									"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/widgets/WIDGET_UUID",
-									"protocol": "https",
-									"host": [
-										"api",
-										"bigcommerce",
-										"com"
-									],
-									"path": [
-										"stores",
-										"{{store_hash}}",
-										"v3",
-										"content",
-										"widgets",
-										"WIDGET_UUID"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "Delete",
-					"item": [
-						{
-							"name": "Delete",
-							"request": {
-								"method": "DELETE",
-								"header": [
-									{
-										"key": "X-Auth-Client",
-										"value": "{{client_id}}"
-									},
-									{
-										"key": "X-Auth-Token",
-										"value": "{{v3_token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/widgets/WIDGET_UUID",
-									"protocol": "https",
-									"host": [
-										"api",
-										"bigcommerce",
-										"com"
-									],
-									"path": [
-										"stores",
-										"{{store_hash}}",
-										"v3",
-										"content",
-										"widgets",
-										"WIDGET_UUID"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Placements",
-			"item": [
-				{
-					"name": "Create",
-					"item": [
-						{
-							"name": "Create",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "X-Auth-Client",
-										"value": "{{client_id}}"
-									},
-									{
-										"key": "X-Auth-Token",
-										"value": "{{v3_token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"template_file\": \"pages/home\",\n  \"entity_id\": \"\",\n  \"region\":\"header_bottom\",\n  \"sort_order\": 1,\n  \"widget_uuid\": \"WIDGET_UUID\",\n  \"status\": \"active\"\n}"
-								},
-								"url": {
-									"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/placements",
-									"protocol": "https",
-									"host": [
-										"api",
-										"bigcommerce",
-										"com"
-									],
-									"path": [
-										"stores",
-										"{{store_hash}}",
-										"v3",
-										"content",
-										"placements"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "List",
-					"item": [
-						{
-							"name": "Without Filter",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "X-Auth-Client",
-										"value": "{{client_id}}"
-									},
-									{
-										"key": "X-Auth-Token",
-										"value": "{{v3_token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"url": {
-									"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/placements",
-									"protocol": "https",
-									"host": [
-										"api",
-										"bigcommerce",
-										"com"
-									],
-									"path": [
-										"stores",
-										"{{store_hash}}",
-										"v3",
-										"content",
-										"placements"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Kind Filter",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "X-Auth-Client",
-										"value": "{{client_id}}"
-									},
-									{
-										"key": "X-Auth-Token",
-										"value": "{{v3_token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"url": {
-									"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/placements?widget_template_kind=custom",
-									"protocol": "https",
-									"host": [
-										"api",
-										"bigcommerce",
-										"com"
-									],
-									"path": [
-										"stores",
-										"{{store_hash}}",
-										"v3",
-										"content",
-										"placements"
-									],
-									"query": [
-										{
-											"key": "widget_template_kind",
-											"value": "custom"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Template File Filter",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "X-Auth-Client",
-										"value": "{{client_id}}"
-									},
-									{
-										"key": "X-Auth-Token",
-										"value": "{{v3_token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"url": {
-									"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/placements?template_file=pages/home",
-									"protocol": "https",
-									"host": [
-										"api",
-										"bigcommerce",
-										"com"
-									],
-									"path": [
-										"stores",
-										"{{store_hash}}",
-										"v3",
-										"content",
-										"placements"
-									],
-									"query": [
-										{
-											"key": "template_file",
-											"value": "pages/home"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Widget Filter",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "X-Auth-Client",
-										"value": "{{client_id}}"
-									},
-									{
-										"key": "X-Auth-Token",
-										"value": "{{v3_token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"url": {
-									"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/placements?widget_uuid=WIDGET_UUID",
-									"protocol": "https",
-									"host": [
-										"api",
-										"bigcommerce",
-										"com"
-									],
-									"path": [
-										"stores",
-										"{{store_hash}}",
-										"v3",
-										"content",
-										"placements"
-									],
-									"query": [
-										{
-											"key": "widget_uuid",
-											"value": "WIDGET_UUID"
-										}
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "Get",
-					"item": [
-						{
-							"name": "Get",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "X-Auth-Client",
-										"value": "{{client_id}}"
-									},
-									{
-										"key": "X-Auth-Token",
-										"value": "{{v3_token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"url": {
-									"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/placements/PLACEMENT_UUID",
-									"protocol": "https",
-									"host": [
-										"api",
-										"bigcommerce",
-										"com"
-									],
-									"path": [
-										"stores",
-										"{{store_hash}}",
-										"v3",
-										"content",
-										"placements",
-										"PLACEMENT_UUID"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "Update",
-					"item": [
-						{
-							"name": "Update",
-							"request": {
-								"method": "PUT",
-								"header": [
-									{
-										"key": "X-Auth-Client",
-										"value": "{{client_id}}"
-									},
-									{
-										"key": "X-Auth-Token",
-										"value": "{{v3_token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"status\": \"inactive\"\t\n}"
-								},
-								"url": {
-									"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/placements/PLACEMENT_UUID",
-									"protocol": "https",
-									"host": [
-										"api",
-										"bigcommerce",
-										"com"
-									],
-									"path": [
-										"stores",
-										"{{store_hash}}",
-										"v3",
-										"content",
-										"placements",
-										"PLACEMENT_UUID"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "Delete",
-					"item": [
-						{
-							"name": "Delete",
-							"request": {
-								"method": "DELETE",
-								"header": [
-									{
-										"key": "X-Auth-Client",
-										"value": "{{client_id}}"
-									},
-									{
-										"key": "X-Auth-Token",
-										"value": "{{v3_token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/placements/PLACEMENT_UUID",
-									"protocol": "https",
-									"host": [
-										"api",
-										"bigcommerce",
-										"com"
-									],
-									"path": [
-										"stores",
-										"{{store_hash}}",
-										"v3",
-										"content",
-										"placements",
-										"PLACEMENT_UUID"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				}
-			]
-		},
-		{
 			"name": "Regions",
 			"item": [
 				{
-					"name": "Regions in templateFile",
+					"name": "Get Regions in Template File",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"pm.test(\"Response is not an error\", () => {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.not.have.jsonBody(\"errors\");",
+									"});",
+									"pm.test(\"Response is JSON with data\", () => {",
+									"    pm.response.to.have.jsonBody(\"data\");",
+									"});"
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [
 							{
-								"key": "X-Auth-Client",
-								"value": "{{client_id}}"
-							},
-							{
-								"key": "X-Auth-Token",
-								"value": "{{v3_token}}"
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json"
+								"value": "application/json",
+								"type": "text"
 							},
 							{
-								"key": "Accept",
-								"value": "application/json"
+								"key": "X-Auth-Token",
+								"value": "{{v3_token}}",
+								"type": "text"
 							}
 						],
 						"url": {
@@ -1038,11 +70,1578 @@
 									"value": "pages/home"
 								}
 							]
+						},
+						"description": "Lists the regions available in a Stencil template file. Change the templateFile value to inspect other pages, such as pages/category."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Widget Templates",
+			"item": [
+				{
+					"name": "Create Widget Template",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"pm.test(\"Response is not an error\", () => {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.not.have.jsonBody(\"errors\");",
+									"});",
+									"pm.test(\"Response is JSON with data\", () => {",
+									"    pm.response.to.have.jsonBody(\"data\");",
+									"});",
+									"pm.test(\"Response includes a widget template UUID\", () => {",
+									"    pm.expect(pm.response.json().data?.uuid).to.be.a(\"string\");",
+									"});",
+									"",
+									"const uuid = pm.response.json().data?.uuid;",
+									"if (uuid) {",
+									"    pm.environment.unset(\"widget_template_uuid\");",
+									"    pm.environment.set(\"widget_template_uuid\", uuid);",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{v3_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Hello World Template\",\n  \"template\": \"<div class=\\\"hello-world\\\">\\n<h2>Hello, World!</h2>\\n<p>This is my first widget template.</p>\\n</div>\",\n  \"schema\": []\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/widget-templates",
+							"protocol": "https",
+							"host": [
+								"api",
+								"bigcommerce",
+								"com"
+							],
+							"path": [
+								"stores",
+								"{{store_hash}}",
+								"v3",
+								"content",
+								"widget-templates"
+							]
+						},
+						"description": "On success, the UUID in the response is saved to the `widget_template_uuid` environment variable, so the requests that need it are filled in for you."
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Widget Templates",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"pm.test(\"Response is not an error\", () => {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.not.have.jsonBody(\"errors\");",
+									"});",
+									"pm.test(\"Response is JSON with data\", () => {",
+									"    pm.response.to.have.jsonBody(\"data\");",
+									"});",
+									"pm.test(\"Response data is a list\", () => {",
+									"    pm.expect(pm.response.json().data).to.be.an(\"array\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{v3_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/widget-templates",
+							"protocol": "https",
+							"host": [
+								"api",
+								"bigcommerce",
+								"com"
+							],
+							"path": [
+								"stores",
+								"{{store_hash}}",
+								"v3",
+								"content",
+								"widget-templates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Widget Templates (Custom)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"pm.test(\"Response is not an error\", () => {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.not.have.jsonBody(\"errors\");",
+									"});",
+									"pm.test(\"Response is JSON with data\", () => {",
+									"    pm.response.to.have.jsonBody(\"data\");",
+									"});",
+									"pm.test(\"Response data is a list\", () => {",
+									"    pm.expect(pm.response.json().data).to.be.an(\"array\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{v3_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/widget-templates?widget_template_kind=custom",
+							"protocol": "https",
+							"host": [
+								"api",
+								"bigcommerce",
+								"com"
+							],
+							"path": [
+								"stores",
+								"{{store_hash}}",
+								"v3",
+								"content",
+								"widget-templates"
+							],
+							"query": [
+								{
+									"key": "widget_template_kind",
+									"value": "custom"
+								}
+							]
+						},
+						"description": "Filters the list to custom widget templates, excluding the templates BigCommerce provides."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Widget Template",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"pm.test(\"Response is not an error\", () => {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.not.have.jsonBody(\"errors\");",
+									"});",
+									"pm.test(\"Response is JSON with data\", () => {",
+									"    pm.response.to.have.jsonBody(\"data\");",
+									"});",
+									"pm.test(\"Response includes a UUID\", () => {",
+									"    pm.expect(pm.response.json().data?.uuid).to.be.a(\"string\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{v3_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/widget-templates/:widget_template_uuid",
+							"protocol": "https",
+							"host": [
+								"api",
+								"bigcommerce",
+								"com"
+							],
+							"path": [
+								"stores",
+								"{{store_hash}}",
+								"v3",
+								"content",
+								"widget-templates",
+								":widget_template_uuid"
+							],
+							"variable": [
+								{
+									"key": "widget_template_uuid",
+									"value": "{{widget_template_uuid}}"
+								}
+							]
+						},
+						"description": "Fill in the widget_template_uuid path variable on the Params tab to look up a different template. It defaults to the most recently created template."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Widget Template",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"pm.test(\"Response is not an error\", () => {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.not.have.jsonBody(\"errors\");",
+									"});",
+									"pm.test(\"Response is JSON with data\", () => {",
+									"    pm.response.to.have.jsonBody(\"data\");",
+									"});",
+									"pm.test(\"Response includes a UUID\", () => {",
+									"    pm.expect(pm.response.json().data?.uuid).to.be.a(\"string\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{v3_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Hello World Template (Updated)\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/widget-templates/:widget_template_uuid",
+							"protocol": "https",
+							"host": [
+								"api",
+								"bigcommerce",
+								"com"
+							],
+							"path": [
+								"stores",
+								"{{store_hash}}",
+								"v3",
+								"content",
+								"widget-templates",
+								":widget_template_uuid"
+							],
+							"variable": [
+								{
+									"key": "widget_template_uuid",
+									"value": "{{widget_template_uuid}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Widget Template",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"pm.test(\"Resource was deleted\", () => {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 204]);",
+									"});",
+									"",
+									"pm.environment.unset(\"widget_template_uuid\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{v3_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/widget-templates/:widget_template_uuid",
+							"protocol": "https",
+							"host": [
+								"api",
+								"bigcommerce",
+								"com"
+							],
+							"path": [
+								"stores",
+								"{{store_hash}}",
+								"v3",
+								"content",
+								"widget-templates",
+								":widget_template_uuid"
+							],
+							"variable": [
+								{
+									"key": "widget_template_uuid",
+									"value": "{{widget_template_uuid}}"
+								}
+							]
 						}
 					},
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Schema",
+			"item": [
+				{
+					"name": "Create Widget Template (Static Image + Content)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"pm.test(\"Response is not an error\", () => {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.not.have.jsonBody(\"errors\");",
+									"});",
+									"pm.test(\"Response is JSON with data\", () => {",
+									"    pm.response.to.have.jsonBody(\"data\");",
+									"});",
+									"pm.test(\"Response includes a widget template UUID\", () => {",
+									"    pm.expect(pm.response.json().data?.uuid).to.be.a(\"string\");",
+									"});",
+									"",
+									"const uuid = pm.response.json().data?.uuid;",
+									"if (uuid) {",
+									"    pm.environment.unset(\"widget_template_uuid\");",
+									"    pm.environment.set(\"widget_template_uuid\", uuid);",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{v3_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Static Image + Content\",\n\t\"schema\": [\n        {\n            \"type\": \"tab\",\n            \"label\": \"Static Content\",\n            \"sections\": [\n                {\n                    \"label\": \"Static Content\",\n                    \"settings\": [\n                        {\n                            \"type\": \"input\",\n                            \"id\": \"heading_text\",\n                            \"label\": \"Heading Text\",\n                            \"default\": \"Type a Heading\"\n                        },\n                        {\n                            \"type\": \"imageManager\",\n                            \"id\": \"image\",\n                            \"label\": \"Image\",\n                            \"default\": {\n                                \"src\": \"https://placehold.it/250x250\",\n                                \"type\": \"IMAGE_MANAGER\"\n                            }\n                        },\n                        {\n                            \"type\": \"range\",\n                            \"label\": \"Image Width\",\n                            \"id\": \"width\",\n                            \"default\": \"250\",\n                            \"typeMeta\": {\n                                \"rangeValues\": {\n                                    \"min\": 100,\n                                    \"max\": 1200,\n                                    \"step\": 1,\n                                    \"unit\": \"px\"\n                                }\n                            }\n                        },\n                        {\n                            \"type\": \"text\",\n                            \"label\": \"Text Block Content\",\n                            \"id\": \"text_block\",\n                            \"default\": \"Add your promotional or informational text for this widget region.\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ],\n    \"template\": \"<h2>{{heading_text}}</h2>\\n<img src=\\\"{{image.src}}\\\" width=\\\"{{width}}\\\" />\\n<div>{{text_block}}</div>\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/widget-templates",
+							"protocol": "https",
+							"host": [
+								"api",
+								"bigcommerce",
+								"com"
+							],
+							"path": [
+								"stores",
+								"{{store_hash}}",
+								"v3",
+								"content",
+								"widget-templates"
+							]
+						},
+						"description": "Creates the Static Image + Content widget template from the schema lab. On success, the UUID in the response is saved to the `widget_template_uuid` environment variable, so the requests that need it are filled in for you."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Widgets and Page Builder",
+			"item": [
+				{
+					"name": "Create Widget",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"pm.test(\"Response is not an error\", () => {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.not.have.jsonBody(\"errors\");",
+									"});",
+									"pm.test(\"Response is JSON with data\", () => {",
+									"    pm.response.to.have.jsonBody(\"data\");",
+									"});",
+									"pm.test(\"Response includes a widget UUID\", () => {",
+									"    pm.expect(pm.response.json().data?.uuid).to.be.a(\"string\");",
+									"});",
+									"",
+									"const uuid = pm.response.json().data?.uuid;",
+									"if (uuid) {",
+									"    pm.environment.unset(\"widget_uuid\");",
+									"    pm.environment.set(\"widget_uuid\", uuid);",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{v3_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Static Image + Content Widget\",\n  \"widget_configuration\": {\n    \"heading_text\": \"Welcome to Our Store\",\n    \"image\": {\n      \"src\": \"https://images.unsplash.com/photo-1523275335684-37898b6baf30\",\n      \"type\": \"IMAGE_MANAGER\"\n    },\n    \"width\": \"400\",\n    \"text_block\": \"Shop our new arrivals before they sell out.\"\n  },\n  \"widget_template_uuid\": \"{{widget_template_uuid}}\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/widgets",
+							"protocol": "https",
+							"host": [
+								"api",
+								"bigcommerce",
+								"com"
+							],
+							"path": [
+								"stores",
+								"{{store_hash}}",
+								"v3",
+								"content",
+								"widgets"
+							]
+						},
+						"description": "Uses the widget template saved in widget_template_uuid. On success, the UUID in the response is saved to the `widget_uuid` environment variable, so the requests that need it are filled in for you."
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Widgets",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"pm.test(\"Response is not an error\", () => {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.not.have.jsonBody(\"errors\");",
+									"});",
+									"pm.test(\"Response is JSON with data\", () => {",
+									"    pm.response.to.have.jsonBody(\"data\");",
+									"});",
+									"pm.test(\"Response data is a list\", () => {",
+									"    pm.expect(pm.response.json().data).to.be.an(\"array\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{v3_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/widgets",
+							"protocol": "https",
+							"host": [
+								"api",
+								"bigcommerce",
+								"com"
+							],
+							"path": [
+								"stores",
+								"{{store_hash}}",
+								"v3",
+								"content",
+								"widgets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Widgets (Custom)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"pm.test(\"Response is not an error\", () => {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.not.have.jsonBody(\"errors\");",
+									"});",
+									"pm.test(\"Response is JSON with data\", () => {",
+									"    pm.response.to.have.jsonBody(\"data\");",
+									"});",
+									"pm.test(\"Response data is a list\", () => {",
+									"    pm.expect(pm.response.json().data).to.be.an(\"array\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{v3_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/widgets?widget_template_kind=custom",
+							"protocol": "https",
+							"host": [
+								"api",
+								"bigcommerce",
+								"com"
+							],
+							"path": [
+								"stores",
+								"{{store_hash}}",
+								"v3",
+								"content",
+								"widgets"
+							],
+							"query": [
+								{
+									"key": "widget_template_kind",
+									"value": "custom"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Widget",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"pm.test(\"Response is not an error\", () => {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.not.have.jsonBody(\"errors\");",
+									"});",
+									"pm.test(\"Response is JSON with data\", () => {",
+									"    pm.response.to.have.jsonBody(\"data\");",
+									"});",
+									"pm.test(\"Response includes a UUID\", () => {",
+									"    pm.expect(pm.response.json().data?.uuid).to.be.a(\"string\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{v3_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/widgets/:widget_uuid",
+							"protocol": "https",
+							"host": [
+								"api",
+								"bigcommerce",
+								"com"
+							],
+							"path": [
+								"stores",
+								"{{store_hash}}",
+								"v3",
+								"content",
+								"widgets",
+								":widget_uuid"
+							],
+							"variable": [
+								{
+									"key": "widget_uuid",
+									"value": "{{widget_uuid}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Widget",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"pm.test(\"Response is not an error\", () => {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.not.have.jsonBody(\"errors\");",
+									"});",
+									"pm.test(\"Response is JSON with data\", () => {",
+									"    pm.response.to.have.jsonBody(\"data\");",
+									"});",
+									"pm.test(\"Response includes a UUID\", () => {",
+									"    pm.expect(pm.response.json().data?.uuid).to.be.a(\"string\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{v3_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Static Image + Content Widget (Updated)\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/widgets/:widget_uuid",
+							"protocol": "https",
+							"host": [
+								"api",
+								"bigcommerce",
+								"com"
+							],
+							"path": [
+								"stores",
+								"{{store_hash}}",
+								"v3",
+								"content",
+								"widgets",
+								":widget_uuid"
+							],
+							"variable": [
+								{
+									"key": "widget_uuid",
+									"value": "{{widget_uuid}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Widget",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"pm.test(\"Resource was deleted\", () => {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 204]);",
+									"});",
+									"",
+									"pm.environment.unset(\"widget_uuid\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{v3_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/widgets/:widget_uuid",
+							"protocol": "https",
+							"host": [
+								"api",
+								"bigcommerce",
+								"com"
+							],
+							"path": [
+								"stores",
+								"{{store_hash}}",
+								"v3",
+								"content",
+								"widgets",
+								":widget_uuid"
+							],
+							"variable": [
+								{
+									"key": "widget_uuid",
+									"value": "{{widget_uuid}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Placement",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"pm.test(\"Response is not an error\", () => {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.not.have.jsonBody(\"errors\");",
+									"});",
+									"pm.test(\"Response is JSON with data\", () => {",
+									"    pm.response.to.have.jsonBody(\"data\");",
+									"});",
+									"pm.test(\"Response includes a placement UUID\", () => {",
+									"    pm.expect(pm.response.json().data?.uuid).to.be.a(\"string\");",
+									"});",
+									"",
+									"const uuid = pm.response.json().data?.uuid;",
+									"if (uuid) {",
+									"    pm.environment.unset(\"placement_uuid\");",
+									"    pm.environment.set(\"placement_uuid\", uuid);",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{v3_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"template_file\": \"pages/home\",\n  \"entity_id\": \"\",\n  \"region\": \"home-top\",\n  \"sort_order\": 1,\n  \"widget_uuid\": \"{{widget_uuid}}\",\n  \"status\": \"active\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/placements",
+							"protocol": "https",
+							"host": [
+								"api",
+								"bigcommerce",
+								"com"
+							],
+							"path": [
+								"stores",
+								"{{store_hash}}",
+								"v3",
+								"content",
+								"placements"
+							]
+						},
+						"description": "Places the widget saved in widget_uuid into the home-top region. On success, the UUID in the response is saved to the `placement_uuid` environment variable, so the requests that need it are filled in for you."
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Placements",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"pm.test(\"Response is not an error\", () => {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.not.have.jsonBody(\"errors\");",
+									"});",
+									"pm.test(\"Response is JSON with data\", () => {",
+									"    pm.response.to.have.jsonBody(\"data\");",
+									"});",
+									"pm.test(\"Response data is a list\", () => {",
+									"    pm.expect(pm.response.json().data).to.be.an(\"array\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{v3_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/placements",
+							"protocol": "https",
+							"host": [
+								"api",
+								"bigcommerce",
+								"com"
+							],
+							"path": [
+								"stores",
+								"{{store_hash}}",
+								"v3",
+								"content",
+								"placements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Placements (Custom)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"pm.test(\"Response is not an error\", () => {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.not.have.jsonBody(\"errors\");",
+									"});",
+									"pm.test(\"Response is JSON with data\", () => {",
+									"    pm.response.to.have.jsonBody(\"data\");",
+									"});",
+									"pm.test(\"Response data is a list\", () => {",
+									"    pm.expect(pm.response.json().data).to.be.an(\"array\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{v3_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/placements?widget_template_kind=custom",
+							"protocol": "https",
+							"host": [
+								"api",
+								"bigcommerce",
+								"com"
+							],
+							"path": [
+								"stores",
+								"{{store_hash}}",
+								"v3",
+								"content",
+								"placements"
+							],
+							"query": [
+								{
+									"key": "widget_template_kind",
+									"value": "custom"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Placements by Template File",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"pm.test(\"Response is not an error\", () => {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.not.have.jsonBody(\"errors\");",
+									"});",
+									"pm.test(\"Response is JSON with data\", () => {",
+									"    pm.response.to.have.jsonBody(\"data\");",
+									"});",
+									"pm.test(\"Response data is a list\", () => {",
+									"    pm.expect(pm.response.json().data).to.be.an(\"array\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{v3_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/placements?template_file=pages/home",
+							"protocol": "https",
+							"host": [
+								"api",
+								"bigcommerce",
+								"com"
+							],
+							"path": [
+								"stores",
+								"{{store_hash}}",
+								"v3",
+								"content",
+								"placements"
+							],
+							"query": [
+								{
+									"key": "template_file",
+									"value": "pages/home"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Placements by Widget",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"pm.test(\"Response is not an error\", () => {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.not.have.jsonBody(\"errors\");",
+									"});",
+									"pm.test(\"Response is JSON with data\", () => {",
+									"    pm.response.to.have.jsonBody(\"data\");",
+									"});",
+									"pm.test(\"Response data is a list\", () => {",
+									"    pm.expect(pm.response.json().data).to.be.an(\"array\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{v3_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/placements?widget_uuid={{widget_uuid}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"bigcommerce",
+								"com"
+							],
+							"path": [
+								"stores",
+								"{{store_hash}}",
+								"v3",
+								"content",
+								"placements"
+							],
+							"query": [
+								{
+									"key": "widget_uuid",
+									"value": "{{widget_uuid}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Placement",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"pm.test(\"Response is not an error\", () => {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.not.have.jsonBody(\"errors\");",
+									"});",
+									"pm.test(\"Response is JSON with data\", () => {",
+									"    pm.response.to.have.jsonBody(\"data\");",
+									"});",
+									"pm.test(\"Response includes a UUID\", () => {",
+									"    pm.expect(pm.response.json().data?.uuid).to.be.a(\"string\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{v3_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/placements/:placement_uuid",
+							"protocol": "https",
+							"host": [
+								"api",
+								"bigcommerce",
+								"com"
+							],
+							"path": [
+								"stores",
+								"{{store_hash}}",
+								"v3",
+								"content",
+								"placements",
+								":placement_uuid"
+							],
+							"variable": [
+								{
+									"key": "placement_uuid",
+									"value": "{{placement_uuid}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Placement",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"pm.test(\"Response is not an error\", () => {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.not.have.jsonBody(\"errors\");",
+									"});",
+									"pm.test(\"Response is JSON with data\", () => {",
+									"    pm.response.to.have.jsonBody(\"data\");",
+									"});",
+									"pm.test(\"Response includes a UUID\", () => {",
+									"    pm.expect(pm.response.json().data?.uuid).to.be.a(\"string\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{v3_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"status\": \"inactive\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/placements/:placement_uuid",
+							"protocol": "https",
+							"host": [
+								"api",
+								"bigcommerce",
+								"com"
+							],
+							"path": [
+								"stores",
+								"{{store_hash}}",
+								"v3",
+								"content",
+								"placements",
+								":placement_uuid"
+							],
+							"variable": [
+								{
+									"key": "placement_uuid",
+									"value": "{{placement_uuid}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Placement",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"pm.test(\"Resource was deleted\", () => {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 204]);",
+									"});",
+									"",
+									"pm.environment.unset(\"placement_uuid\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{v3_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/placements/:placement_uuid",
+							"protocol": "https",
+							"host": [
+								"api",
+								"bigcommerce",
+								"com"
+							],
+							"path": [
+								"stores",
+								"{{store_hash}}",
+								"v3",
+								"content",
+								"placements",
+								":placement_uuid"
+							],
+							"variable": [
+								{
+									"key": "placement_uuid",
+									"value": "{{placement_uuid}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GraphQL",
+			"item": [
+				{
+					"name": "Update Widget Template (New Version)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"pm.test(\"Response is not an error\", () => {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.not.have.jsonBody(\"errors\");",
+									"});",
+									"pm.test(\"Response is JSON with data\", () => {",
+									"    pm.response.to.have.jsonBody(\"data\");",
+									"});",
+									"pm.test(\"Response includes a UUID\", () => {",
+									"    pm.expect(pm.response.json().data?.uuid).to.be.a(\"string\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{v3_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Variant List\",\n    \"template\": \"{{#unless _.data.site.product}}\\n    <div>Select a product in Page Builder to populate this widget</div>\\n{{else}}\\n    <div style=\\\"width:100%\\\">\\n        <img \\n        srcset=\\\"{{_.data.site.product.defaultImage.url320wide}} 320w,\\n        {{_.data.site.product.defaultImage.url640wide}} 640w,\\n        {{_.data.site.product.defaultImage.url960wide}} 960w,\\n        {{_.data.site.product.defaultImage.url960wide}} 1280w\\\"\\n        sizes=\\\"(max-width: 600px) 320px,\\n        960px\\\"\\n        src=\\\"{{_.data.site.product.defaultImage.url960wide}}\\\"\\n        style=\\\"display: block;max-width: 66%; margin-left:auto; margin-right:auto\\\" />\\n        </div>\\n        <div style=\\\"display: block;margin-left:auto; margin-right:auto;\\\">\\n            <strong style=\\\"display: block;\\\">{{_.data.site.product.name}}</strong>\\n            <em style=\\\"display: block;\\\">{{_.data.site.product.plainTextDescription}}</em>\\n            <ul style=\\\"list-style: none;\\\">\\n            {{#each _.data.site.product.variants.edges }}\\n                <li>\\n                    <div style=\\\"display:flex;flex-direction: row\\\">\\n                        <div style=\\\"width:160px;flex-grow: 1\\\">\\n                            {{#if node.defaultImage}}\\n                            <img src=\\\"{{node.defaultImage.url160wide}}\\\"/>\\n                            {{/if}}\\n                        </div>\\n                        <div style=\\\"flex-grow: 1\\\">\\n                            <span>\\n                                {{toFixed node.prices.price.value 2}} {{node.prices.price.currencyCode}} \\n                            </span>\\n                        </div>\\n                        <div style=\\\"flex-grow: 3\\\">\\n                            <strong>{{node.sku}}</strong>\\n                        </div>\\n                    </div>\\n                </li>\\n            {{/each}}\\n            </ul>\\n        </div>\\n    </div>\\n{{/unless}}\",\n    \"create_new_version\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.bigcommerce.com/stores/{{store_hash}}/v3/content/widget-templates/:widget_template_uuid",
+							"protocol": "https",
+							"host": [
+								"api",
+								"bigcommerce",
+								"com"
+							],
+							"path": [
+								"stores",
+								"{{store_hash}}",
+								"v3",
+								"content",
+								"widget-templates",
+								":widget_template_uuid"
+							],
+							"variable": [
+								{
+									"key": "widget_template_uuid",
+									"value": ""
+								}
+							]
+						},
+						"description": "Creates a new version of a widget template (create_new_version is true), so existing widgets are unchanged. Enter the UUID of the template you published with Widget Builder in the widget_template_uuid path variable on the Params tab."
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"const required = [\"store_hash\", \"v3_token\"];",
+					"const missing = required.filter(name => !pm.variables.get(name));",
+					"if (missing.length) {",
+					"    throw new Error(\"Missing environment variable(s): \" + missing.join(\", \") + \". Select your store's environment and make sure these are set.\");",
+					"}"
+				]
+			}
 		}
 	]
 }
